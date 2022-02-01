@@ -3,7 +3,7 @@ import './NotesLayout.css';
 
 const NotesLayout = (props) => {
 
-    const { showAll, notes, setNotes } = props;
+    const { search, showAll, notes, setNotes } = props;
 
     return (
         <div className="notes_layout">
@@ -12,7 +12,11 @@ const NotesLayout = (props) => {
                     .filter((note) => !note.completed || showAll)
                     .map((note) => {
                         return (
-                            <Note note={note} notes={notes} setNotes={setNotes} key={`${note.id}-${note.date}`} />
+                            note.title.toLowerCase().startsWith(search.toLowerCase())
+                            ? 
+                                <Note note={note} notes={notes} setNotes={setNotes} key={`${note._id}-${note.date}`} />
+                            :
+                                ''
                         );
                     })
             }

@@ -16,7 +16,7 @@ const Note = (props) => {
         <div className="note">
             <div className="note_header">
                 <h2 className="note-title">{note.title ? note.title : ''}</h2>
-                <h2 className="note-date">{note.date ? note.date.toLocaleDateString('es-ES') : ''}</h2>
+                <h2 className="note-date">{note.date ? new Date(note.date).toLocaleDateString('es-ES') : ''}</h2>
             </div>
             <h3 className="note-content">{note.content ? note.content : ''}</h3>
             <div className="completed_container">
