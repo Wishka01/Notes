@@ -1,10 +1,11 @@
 .note {
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: relative;
     width: 350px;
     height: 350px;
-    background-color: #FFD233;
+    background-color: #fff133;
     border-radius: 3px;
     box-shadow: 0px 2px 5px #000;
 }
@@ -30,20 +31,28 @@
 .note-title {
     margin-left: 15px;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .note-date {
     margin-right: 15px;
     color: #333;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.note_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
 }
 
 .note-content {
-    width: 94%;
+    width: 90%;
     height: 100%;
-    margin: 5px 3%;
 }
 
 .note-content::after {
